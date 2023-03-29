@@ -14,4 +14,8 @@ int main(int argc, char *argv [])
 
     printf("\n");
 
+    printf("vreau sa vad daca se modifica ceva in cod");
+
+    printf("\n");
+
 }
