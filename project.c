@@ -18,4 +18,6 @@ int main(int argc, char *argv [])
 
     printf("\n");
 
+    printf("se pare ca se modifica");
+
 }
