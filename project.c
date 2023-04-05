@@ -105,7 +105,53 @@ void regularFileMenu(char* file) {
                 break;
             case 'a':
                 printf("Access rights: ");
+
+            if(st.st_mode & S_IRUSR)
+                printf("Read: Yes");
+            else
+                print("Read: No");
+
+            if(st.st_mode & S_IWUSR)
+                printf("Write: Yes");
+            else
+                printf("Write: No");
+
+            if(st.st_mode & S_IXUSR)
+                printf("Execution: Yes");
+            else
+                printf("Execusion: No");
+
+            if(st.st_mode & S_IRGRP)
+                printf("Read: Yes");
+            else
+                printf("Read: No");
+
+            if(st.st_mode & S_IWGRP)
+                printf("Write for group access: Yes");
+            else
+                printf("Write for group access: No");
+
+            if(st.st_mode & S_IXGRP)
+                printf("Execusion for group access: Yes");
+            else
+                printf("Execusion for group access: No");
+
+            if(st.st_mode & S_IROTH)
+                printf("Read access right for other users: Yes");
+            else
+                printf("Read access right for other users: No");
                 
+            if(st.st_mode & S_IWOTH)
+                printf("Write access right for other users: Yes");
+            else
+                printf("Write access right for other users: No");
+
+            if(st.st_mode & S_IROTH)
+                printf("Execution access right for other users: Yes");
+            else
+                printf("Execution access right for other users: No");
+
+
                 break;
             case 'l':
                 char link_name[256];
